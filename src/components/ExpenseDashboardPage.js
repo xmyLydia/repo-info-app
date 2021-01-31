@@ -1,10 +1,23 @@
 import React from 'react';
 import ExpensesList from './ExpensesList';
 import ExpenseListFilters from './ExpenseListFilters';
-const ExpenseDashboardPage = () => (
+import GitForm from './GitForm';
+import { fetchUser } from '../actions/user';
+import { connect } from 'react-redux';
+
+const ExpenseDashboardPage = (props) => (
     <div>
-        <ExpenseListFilters />
-        <ExpensesList />
+        {/* <ExpenseListFilters />
+        <ExpensesList /> */}
+        <GitForm
+            onSubmit={(user) => {
+                props.dispatch(fetchUser(user));
+            }}
+        />
     </div>
 );
-export default ExpenseDashboardPage;
+const mapDispatchToProps = (dispatch) => ({
+    fetchUser: (user) => dispatch(fetchUser(user))
+});
+export default connect(mapDispatchToProps)(ExpenseDashboardPage);
+
