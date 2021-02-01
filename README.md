@@ -17,3 +17,6 @@
 2. Currently it just supports oAuth on google, try using oAuth on github.
 3. Try to learn & write test scripts on project. 
 4. Style the project.
+##Note
+#### suggest use chrome plugin `Allow CORS: Access-Control-Allow-Origin` and turn it on when visiting the page.
+it allows people perform cross-domain Ajax requests in web applications. Investigating a better way to Avoid using this tool.
