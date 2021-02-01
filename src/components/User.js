@@ -11,6 +11,7 @@ const User = (props) => (
                 <a href={props.user.url}>link</a>
                 <p>name: {props.user.name}</p>
                 <button onClick={() => {
+                    localStorage.setItem("counter", 1);
                     props.dispatch(fetchRepository(props.user.login, props.page));
                 }}>search repository</button>
                 {props.repositories && props.repositories.length > 0 ? (

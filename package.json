@@ -49,4 +49,5 @@
     "cross-env": "5.0.5",
     "webpack-dev-server": "2.5.1"
   }
+  ,"proxy":"https://git-info-backend.herokuapp.com/"
 }
