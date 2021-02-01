@@ -15,9 +15,7 @@ export const fetchRepository = (userName, pageIndex) => {
        
         const repositoryAPI =
             `https://cors-anywhere.herokuapp.com/https://git-info-backend.herokuapp.com/users/${userName}/repos?page=${pageIndex}&size=1`; // page need change
-        return axios.get(repositoryAPI,{
-            headers: {"Access-Control-Allow-Origin": "*"}
-        }).then((res) => {
+        return axios.get(repositoryAPI).then((res) => {
             const repositories = res.data;
             dispatch(setRepositories(repositories));
             dispatch(setPage(pageIndex));
