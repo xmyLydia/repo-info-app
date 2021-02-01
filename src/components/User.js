@@ -5,7 +5,6 @@ import RepositoryList from './RepositoryList';
 
 const User = (props) => (
     <div>
-        {props.user.id ? (
             <div>
                 <h3>userName: {props.user.login}, id: {props.user.id}</h3>
                 <a href={props.user.url}>link</a>
@@ -18,8 +17,6 @@ const User = (props) => (
                     <RepositoryList />
                 ) : null}
             </div>
-        )
-            : <p>Please input existing user name</p>}
 
     </div>
 );
