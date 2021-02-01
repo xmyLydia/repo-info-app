@@ -7,7 +7,7 @@ export const setUser = (user) => ({
 })
 export const fetchUser = (userName) => {
     return (dispatch) => {
-        const userAPI = `https://api.github.com/users/${userName}`;
+        const userAPI = `https://git-info-backend.herokuapp.com/users/${userName}`;
         return axios.get(userAPI).then((res) => {
             const userInfo = res.data;
             dispatch(setUser(userInfo));

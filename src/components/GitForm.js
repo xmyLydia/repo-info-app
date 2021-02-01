@@ -7,7 +7,8 @@ export default class GitForm extends React.Component {
 
         this.state = {
             login: props.user ? props.user.login : '', //actually is user name
-            error: ''
+            error: '',
+            page: 1
         };
     }
 
