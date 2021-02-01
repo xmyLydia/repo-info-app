@@ -11,17 +11,5 @@ const firebaseConfig = {
 };
 firebase.initializeApp(firebaseConfig);
 const database = firebase.database();
-
-export { firebase, database as default };
-// database.ref().set({
-//     name: 'mxie',
-//     age: 28,
-//     location: {
-//         city: 'city1',
-//         country: 'country1'
-//     }
-// }).then(() => {
-//     console.log("data is saved");
-// }).catch((e) => {
-//     console.log('error: ', e);
-// });
+const googleAuthProvider = new firebase.auth.OAuthProvider('google.com');
+export { firebase, googleAuthProvider, database as default };

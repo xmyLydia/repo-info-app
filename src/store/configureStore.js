@@ -5,6 +5,7 @@ import userReducer from '../reducers/user';
 import repositoriesReducer from '../reducers/repositories';
 import pageReducer from '../reducers/page';
 import thunk from 'redux-thunk';
+import authReducer from '../reducers/auth';
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__
     || compose;
@@ -15,8 +16,8 @@ export default () => {
             filters: filtersReducer,
             user: userReducer,
             repositories: repositoriesReducer,
-            page: pageReducer
-           
+            page: pageReducer,
+            auth: authReducer
         }),
         composeEnhancers(applyMiddleware(thunk))
     );

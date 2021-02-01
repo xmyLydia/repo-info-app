@@ -10,7 +10,6 @@ const RepositoryList = (props) => (
         {props.repositories && props.repositories.length > 0 ? (
             <button onClick={() => {
                 const currentIndex = localStorage.getItem("counter") ? parseInt(localStorage.getItem("counter")) : 1;
-                console.log(currentIndex);
                 localStorage.setItem('counter', currentIndex + 1);
                 props.dispatch(fetchRepository(props.user.login, currentIndex + 1)); //this part need correct state.page
             }}>Load more repository</button>
