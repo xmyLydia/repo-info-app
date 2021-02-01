@@ -11,7 +11,7 @@
 ##Conclusion
 1. React
 2. Redux
-3. Firebase oAuth
+3. Firebase oAuth by using oAuthProvider (https://firebase.google.com/docs/reference/js/firebase.auth.OAuthProvider?authuser=0)
 ##What can be improved
 1. Needs to upgrade to use Hooks.
 2. Currently it just supports oAuth on google, try using oAuth on github.
