@@ -1,6 +1,5 @@
 import React from 'react';
 import User from './User';
-import axios from 'axios';
 
 export default class GitForm extends React.Component {
     constructor(props) {
